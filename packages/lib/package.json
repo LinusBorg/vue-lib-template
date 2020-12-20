@@ -1,23 +1,27 @@
 {
   "name": "lib",
   "version": "0.0.0",
+  "private": true,
   "description": "This is a placeholder description, please change me.",
-  "author": "Thorsten Luenborg <t.luneborg@googlemail.com>",
+  "author": "Thorsten Lünborg <t.luneborg@googlemail.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "lb/index.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "main": "dist/index.js",
+  "module": "dist/libu.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "lib"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
     "build": "tsdx build --tsconfig tsconfig.build.json",
+    "lint": "eslint 'src/**/*.{ts,vue}'",
     "test": "jest",
     "test:w": "jest --watch --runInBand"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   },
   "peerDependencies": {
     "vue": "^3.0.4"
