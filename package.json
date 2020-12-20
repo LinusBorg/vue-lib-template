@@ -1,0 +1,32 @@
+{
+  "name": "vue-lib-monorepo",
+  "version": "0.0.0",
+  "description": "A monorepo template for developing vue libraries",
+  "author": "Thorsten Lünborg <thorsten@linusb.org>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/*", "playground", "docs"],
+  "main": "index.js",
+  "scripts": {
+    "start": "lerna run start --stream --parallel",
+    "play": "cd playground && yarn start",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open",
+    "changeset": "changeset",
+    "release": "changeset publish",
+    "version:canary": "changeset version --snapshot canary",
+    "release:canary": "changeset publish --tag canary"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.2.7",
+    "@changesets/cli": "^2.10.3",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "cypress": "^5.2.0",
+    "lerna": "^3.15.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tsdx": "^0.14.0",
+    "typescript": "^3.9.7"
+  }
+}

@@ -1,0 +1,13 @@
+*.log
+.DS_Store
+node_modules
+dist
+
+package-lock.json
+yarn.lock
+!/yarn.lock
+
+.yalc
+yalc.lock
+
+TODO.md
