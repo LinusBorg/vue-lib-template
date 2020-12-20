@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-module.exports = lib;
+module.exports = lib
 
 function lib() {
-    // TODO
+  // TODO
 }

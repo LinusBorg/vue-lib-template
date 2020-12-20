@@ -15,6 +15,7 @@
     "start": "lerna run start --stream --parallel",
     "test": "lerna run test --",
     "lint": "lerna run lint -- --fix",
+    "build": "lerna run build",
     "play": "cd playground && yarn start",
     "cypress": "cypress run",
     "cypress:open": "cypress open",
@@ -26,15 +27,15 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.2.7",
     "@changesets/cli": "^2.10.3",
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8",
+    "@vue/compiler-sfc": "^3.0.4",
     "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-beta.13",
     "cypress": "^5.2.0",
     "eslint-plugin-vue": "^7.3.0",
     "lerna": "^3.15.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "tsdx": "^0.14.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "vue": "^3.0.4",
+    "vue-jest": "^5.0.0-alpha.7"
   }
 }

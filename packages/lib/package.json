@@ -14,6 +14,12 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "jest",
+    "test:w": "jest --watch --runInBand"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.4"
   }
 }
