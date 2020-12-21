@@ -12,10 +12,10 @@
   ],
   "main": "index.js",
   "scripts": {
-    "start": "lerna run start --stream --parallel --scope '{lib}'",
+    "start": "lerna run start --stream --parallel --scope '{vue-monorepo-lib}'",
     "test": "lerna run test --",
     "lint": "lerna run lint -- --fix",
-    "build": "lerna run build",
+    "build": "lerna run build --scope vue-monorepo-lib",
     "play": "cd playground && yarn start",
     "cypress": "cypress run",
     "cypress:open": "cypress open",

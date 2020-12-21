@@ -1,5 +1,5 @@
 {
-  "name": "lib",
+  "name": "vue-monorepo-lib",
   "version": "0.0.0",
   "private": true,
   "description": "This is a placeholder description, please change me.",
@@ -7,7 +7,7 @@
   "homepage": "",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "dist/libu.esm.js",
+  "module": "dist/vue-monorepo-lib.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
