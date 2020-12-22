@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'MyLib',
-  description: 'A description',
+  title: 'VueMonoRepoLib',
+  description: 'Replace this descriptions with something nice!',
   themeConfig: {
     repo: '',
     repoLabel: 'GitHub',
@@ -18,10 +18,6 @@ module.exports = {
       {
         text: 'API',
         link: '/api',
-      },
-      {
-        text: 'Docs for v2',
-        link: 'https://v2.portal-vue.linusb.org',
       },
     ],
     sidebar: {

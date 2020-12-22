@@ -15,7 +15,10 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "start": "vitepress dev ."
+  },
+  "dependencies": {
+    "vue-monorepo-lib": "*"
   },
   "devDependencies": {
     "vitepress": "^0.9.2"
