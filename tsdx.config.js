@@ -1,5 +1,5 @@
-const postcss = require('rollup-plugin-postcss')
 const autoprefixer = require('autoprefixer')
+const postcss = require('rollup-plugin-postcss')
 const vue = require('rollup-plugin-vue')
 
 module.exports = {
