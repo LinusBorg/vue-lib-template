@@ -15,7 +15,8 @@
     "lib"
   ],
   "scripts": {
-    "start": "vitepress dev ."
+    "start": "vitepress dev .",
+    "build": "vitepress build ."
   },
   "dependencies": {
     "vue-monorepo-lib": "*"
