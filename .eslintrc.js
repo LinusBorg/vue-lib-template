@@ -11,4 +11,13 @@ module.exports = {
       version: '999.999.999',
     },
   },
+  overrides: [
+    {
+      files: ['*.spec.ts', '*.spec.js'],
+      env: {
+        jest: true,
+        browser: true,
+      },
+    },
+  ],
 }

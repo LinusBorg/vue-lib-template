@@ -19,8 +19,8 @@
     "typecheck": "vuedx-typecheck  src",
     "typecheck:watch": "vuedx-typecheck  src --watch",
     "lint": "eslint 'src/**/*.{ts,vue}'",
-    "test": "jest --config ../../jest.config.js",
-    "test:w": "jest --config ../../jest.config.js --watch --runInBand"
+    "test": "jest --config ../../jest.config.ts",
+    "test:w": "jest --config ../../jest.config.ts --watch --runInBand"
   },
   "dependencies": {
     "tslib": "^2.0.0"
