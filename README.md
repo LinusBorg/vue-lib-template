@@ -1,4 +1,4 @@
-# Vue Library-MonorK4324epo Template
+# Vue Library-Monorepo Template
 
 > A repository template for developing Vue 3 libraries in a monorepo powered by yarn workspaces
 
@@ -19,12 +19,12 @@ It also uses a bunch of new/experimental things out of the Vue ecosystem (namely
 * Build your libraries powered by [tsdx](https//www.tsdx.io), adjusted/extended to work well with Vue
 * Integrated playground app powered by [Vite](https://github.com/vitejs/vite)
 * Documentation powered by [Vitepress](https://vitepress.vuejs.org)
-  * [PLANNED] Netlify deployment preconfigured
+  * [PLANNED] Netlify deployment pre-configured
 * All-around Typescript-first approach (*except for config files etc.)
 * Testing:
   * Unit Tests with [Jest](https://www.jestjs.io)
   * E2E Tests with [Cypress](https://www.cypress.io)
-* Liniting with `eslint` and `prettier`
+* Linting with `eslint` and `prettier`
   * [PLANNED] linting & fixing for staged files (`lint-staged`)
 * [WIP] Changelog & release management via [Changesets](#)
 * [PLANNED] boilerplate generator for new packages via [hygen](https://www.hygen.io)
@@ -34,7 +34,6 @@ It also uses a bunch of new/experimental things out of the Vue ecosystem (namely
 ## Inspiration and prior art
 
 This template is in huge parts inspired or directly copied from Jared Palmer's [tsdx-monorepo](https://github.com/jaredpalmer/tsdx-monorepo).
-
 
 ## Troubleshooting
 

@@ -6,19 +6,21 @@
   "author": "Thorsten Lünborg <t.luneborg@googlemail.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/vue-monorepo-lib.esm.js",
+  "type": "module",
+  "main": "dist/es5/vue-monorepo-lib.umd.js",
+  "module": "dist/vue-monorepo-lib.es.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
-    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "build": "vite build",
+    "typecheck": "vuedx-typecheck  src",
+    "typecheck:watch": "vuedx-typecheck  src --watch",
     "lint": "eslint 'src/**/*.{ts,vue}'",
-    "test": "jest",
-    "test:w": "jest --watch --runInBand"
+    "test": "jest --config ../../jest.config.js",
+    "test:w": "jest --config ../../jest.config.js --watch --runInBand"
   },
   "dependencies": {
     "tslib": "^2.0.0"

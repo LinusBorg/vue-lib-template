@@ -14,13 +14,14 @@
     "moduleResolution": "node",
     "jsx": "preserve",
     "esModuleInterop": true,
+    "types": ["vite/client", "jest"],
   },
   "include": [
     "/**/src/**/*.ts",
     "/**/src/**/*.js",
     "/**/src/**/*.vue",
     "/cypress/**/*.js",
-    // necessary for unbreaking jest types broken by cypress' chai dependency
+    // necessary for un-breaking jest types broken by cypress' chai dependency
     // https://github.com/cypress-io/cypress/issues/1087#issuecomment-353370449
     "./node_modules/jest", 
   ]

@@ -1,6 +1,6 @@
 module.exports = {
-    env: {
-      jest: true,
-      browser: true,
-    }
+  env: {
+    jest: true,
+    browser: true,
+  },
 }

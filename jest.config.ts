@@ -1,4 +1,5 @@
-module.exports = {
+import type { Config } from '@jest/types'
+const config: Config.InitialOptions = {
   preset: 'ts-jest',
   globals: {},
   testEnvironment: 'jsdom',
@@ -7,4 +8,7 @@ module.exports = {
     '^.+\\js$': 'babel-jest',
   },
   moduleFileExtensions: ['vue', 'js', 'json', 'jsx', 'ts', 'tsx', 'node'],
+  testMatch: ['**/__tests__/**/*.spec.[jt]s?(x)'],
 }
+
+export default config

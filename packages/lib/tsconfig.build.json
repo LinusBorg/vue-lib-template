@@ -1,7 +1,0 @@
-{
-  "extends": "../../tsconfig.build.json",
-  "include": ["src/**/*.ts", "src/**/*.vue", "types", "../../types"],
-  "compilerOptions": {
-    "skipLibCheck": true,
-  }
-}
