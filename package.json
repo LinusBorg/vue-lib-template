@@ -6,9 +6,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "playground",
-    "docs"
+    "packages/*"
   ],
   "main": "index.js",
   "scripts": {
@@ -16,7 +14,7 @@
     "test": "lerna run test --",
     "lint": "lerna run lint -- --fix",
     "build": "lerna run build --scope vue-monorepo-lib",
-    "play": "cd playground && yarn start",
+    "play": "cd packages/playground && yarn start",
     "cypress": "cypress run --config-file cypress/cypress.json",
     "cypress:open": "cypress open --config-file cypress/cypress.json",
     "changeset": "changeset",

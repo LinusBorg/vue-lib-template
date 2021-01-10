@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "build": "vite build",
+    "build:types": "rollup --config rollup.types.js",
     "typecheck": "vuedx-typecheck  src",
     "typecheck:watch": "vuedx-typecheck  src --watch",
     "lint": "eslint 'src/**/*.{ts,vue}'",

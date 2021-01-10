@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // "baseUrl": "./",
+    "baseUrl": "./",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
@@ -15,6 +15,9 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "types": ["vite/client", "jest"],
+    "paths": {
+      "vue-monorepo-lib": ["./packages/lib/src/index.ts"]
+    }
   },
   "include": [
     "/**/src/**/*.ts",
