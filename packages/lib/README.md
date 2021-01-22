@@ -5,7 +5,7 @@
 ## Usage
 
 ```js
-const lib = require('lib');
+import VueMonoRepo from 'vue-monorepo-lib'
 
 // TODO: DEMONSTRATE API
 ```
