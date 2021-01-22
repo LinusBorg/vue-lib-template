@@ -15,13 +15,14 @@
     "README.md"
   ],
   "scripts": {
-    "build": "vite build",
-    "build:types": "rollup --config rollup.types.js",
-    "typecheck": "vuedx-typecheck  src",
+    "build": "yarn build:lib && yarn build:types",
+    "build:lib": "vite build",
+    "build:types": "rollup --config ../../config/rollup.types.config.js && rm -R types",
+    "typecheck": "vuedx-typecheck src",
     "typecheck:watch": "vuedx-typecheck  src --watch",
     "lint": "eslint 'src/**/*.{ts,vue}'",
     "test": "jest --config ../../jest.config.ts",
-    "test:w": "jest --config ../../jest.config.ts --watch --runInBand"
+    "test:w": "jest --config ../../config/jest.config.ts --watch --runInBand"
   },
   "dependencies": {
     "tslib": "^2.0.0"
