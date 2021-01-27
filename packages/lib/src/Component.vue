@@ -2,6 +2,10 @@
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: '',
+  props: {
+    message: { type: String, required: true },
+  },
+  emits: ['messageChanged'],
   setup() {},
 })
 </script>
