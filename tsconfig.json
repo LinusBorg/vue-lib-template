@@ -20,6 +20,7 @@
     }
   },
   "include": [
+    "/config/*.ts",
     "/**/src/**/*.ts",
     "/**/src/**/*.js",
     "/**/src/**/*.vue",

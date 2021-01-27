@@ -9,6 +9,7 @@ export default {
   },
   plugins: [vue()],
   optimizeDeps: {
+    link: ['vue-monorepo-lib'],
     exclude: ['postcss', 'autoprefixer', '@tailwindcss/postcss7-compat'],
   },
 }
