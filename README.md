@@ -16,28 +16,28 @@ It also uses a bunch of new/experimental things out of the Vue ecosystem (namely
 
 ## Features
 
-* Build your libraries powered by [tsdx](https//www.tsdx.io), adjusted/extended to work well with Vue
-* Integrated playground app powered by [Vite](https://github.com/vitejs/vite)
-* Documentation powered by [Vitepress](https://vitepress.vuejs.org)
-  * [PLANNED] Netlify deployment pre-configured
-* All-around Typescript-first approach (*except for config files etc.)
+* ✅ Full Typescript support for the whole dev workflow
+* ⚡️  Lightning-fast dev workflow completely powered by Vite:
+  * ⚙️ Build your libraries with [Vite](https://github.com/vitejs/vite)
+    * extract type declarations with `rollup-plugin-typescript2`, bundled with `rollup-plugin-dts`
+  * 🏈 Integrated playground app powered by [Vite](https://github.com/vitejs/vite) as well
+  * 📚 Documentation powered by [Vitepress](https://vitepress.vuejs.org)
 * Testing:
-  * Unit Tests with [Jest](https://www.jestjs.io)
-  * E2E Tests with [Cypress](https://www.cypress.io)
-* Linting with `eslint` and `prettier`
+  * 💊 Unit Tests with [Jest](https://www.jestjs.io)
+  * 🖥 E2E Tests with [Cypress](https://www.cypress.io)
+* 🖍 Linting with `eslint` and `prettier`
   * [PLANNED] linting & fixing for staged files (`lint-staged`)
 * [WIP] Changelog & release management via [Changesets](#)
+* [PLANNED] Netlify deployment pre-configured
 * [PLANNED] boilerplate generator for new packages via [hygen](https://www.hygen.io)
-* Proper config for using the Vetur VSCode extension in a monorepo
-
 
 ## Inspiration and prior art
 
 This template is in huge parts inspired or directly copied from Jared Palmer's [tsdx-monorepo](https://github.com/jaredpalmer/tsdx-monorepo).
 
-## Troubleshooting
+## Documentation, FAQ and Troubleshooting
 
-[PLANNED] see wiki.
+see Github wiki: ...#
 
 ## Commands
 
@@ -47,24 +47,26 @@ All commands can be run directly from the project root like:
 yarn start
 ```
 
-Some of them use lerna to run multiple long-running (watch) tasks in parallel and stream their output to the terminal. 
-
-> _❗️ If you are aware of a good replacement for this one task, please open an issue. This is the only thing I use lerna for, essentially, and I'd be happy to drop it for something lighter_
-
-### `start`
-
-runs a continuous build process for all packages in `/packages/*` using `tsdx watch`, so all packages rebuild whenever their code (or a dependency) changes.
+Some of them use [wsrun](https://github.com/hfour/wsrun) to run multiple tasks in parallel across packages and stream their output to the terminal.
 
 ### build
 
+Build everything: library packages, docs and playground app
 ### play
 
-starts the `Vite` dev server with the playground app for testing playing around with your libraries manually. Also is the app that cypress should test against.
+starts the `Vite` dev server for the playground app for testing playing around with your libraries manually. 
+
+During `play`, no bundling has to be done as all of the library package's code is compiled JIT by Vite.
+
+Also is the app that cypress should test against.
 
 ### lint
 
+Run eslint on all packages
+
 ### test
 
+Run `jest` unit tests on all packages
 ### cypress
 
 ### cypress:open

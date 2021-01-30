@@ -9,6 +9,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
-          start: npm run start:app
+          start: npm run start
+          env: 
+            VITE_SKIP_WS_ALIAS: true
           wait-on: 'http://localhost:1234'
           wait-on-timeout: 120

@@ -16,7 +16,8 @@
   ],
   "scripts": {
     "start": "vitepress dev .",
-    "build": "vitepress build ."
+    "build": "vitepress build .",
+    "lint": "eslint 'src/**/*.{ts,vue}' --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "vue-monorepo-lib": "*"
