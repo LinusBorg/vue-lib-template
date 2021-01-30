@@ -1,6 +1,6 @@
 <template>
   <HelloWorld msg="Hello Vue 3.0 + Vite" />
-  <MyComponent />
+  <MyComponent message="Hello from 'vue-monorepo-lib'" />
 </template>
 
 <script>

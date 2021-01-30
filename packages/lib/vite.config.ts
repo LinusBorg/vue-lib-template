@@ -14,7 +14,7 @@ export default defineConfig({
   esbuild: false,
   build: {
     lib: {
-      entry: path.join(__dirname, 'src/index.ts'),
+      entry: './src/main.ts',
       name: 'VueMonorepoLib',
     },
     minify: false,

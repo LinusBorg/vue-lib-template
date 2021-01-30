@@ -12,7 +12,7 @@ export default defineComponent({
 <template>
   <h1>This is your component!</h1>
   <div>
-    <p>With some content</p>
+    <p>{{ message }} !!</p>
   </div>
 </template>
 <style lang="postcss"></style>

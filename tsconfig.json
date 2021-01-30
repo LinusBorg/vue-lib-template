@@ -16,7 +16,7 @@
     "esModuleInterop": true,
     "types": ["vite/client", "jest"],
     "paths": {
-      "vue-monorepo-lib": ["./packages/lib/src/index.ts"]
+      "vue-monorepo-lib": ["packages/lib/src/main.ts"]
     }
   },
   "include": [
