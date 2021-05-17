@@ -23,6 +23,6 @@
     "vue-monorepo-lib": "*"
   },
   "devDependencies": {
-    "vitepress": "^0.11.5"
+    "vitepress": "^0.12.0"
   }
 }

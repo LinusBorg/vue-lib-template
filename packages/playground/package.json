@@ -8,15 +8,12 @@
     "lint": "eslint 'src/**/*.{ts,vue}'"
   },
   "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.2",
-    "autoprefixer": "^9",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^3.0.4",
     "vue-monorepo-lib": "*"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.4",
-    "vite": "^2.0.0-0"
+    "vite": "^2.0.0-0",
+    "vite-plugin-windicss": "^0.15.10"
   }
 }
