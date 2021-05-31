@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 import MyComponent from './Component.vue'
 
 export default function install(app: App) {

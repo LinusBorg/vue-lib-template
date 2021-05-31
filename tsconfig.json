@@ -23,7 +23,7 @@
     "esModuleInterop": true,
     "types": ["vite/client", "jest", "cypress"],
     "paths": {
-      "vue-monorepo-lib": ["packages/lib/src/main.ts"]
+      "@linusborg/lib": ["packages/lib/src/main.ts"]
     }
   },
   "include": [

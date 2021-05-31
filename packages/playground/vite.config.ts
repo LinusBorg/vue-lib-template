@@ -7,18 +7,11 @@ export default {
   plugins: [vue(), WindiCSS()],
   resolve: {
     alias: {
-      '@linusborg/vue-teleport-plus':
-        '@linusborg/vue-teleport-plus/src/index.ts',
+      '@linusborg/lib': '@linusborg/lib/src/main.ts',
     },
     dedupe: ['vue'],
   },
   optimizeDeps: {
-    exclude: [
-      '@linusborg/vue-teleport-plus',
-      'postcss',
-      'autoprefixer',
-      '@tailwindcss/postcss7-compat',
-    ],
-    link: ['@linusborg/vue-teleport-plus'],
+    exclude: ['@linusborg/lib'],
   },
 }

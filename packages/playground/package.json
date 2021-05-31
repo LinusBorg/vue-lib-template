@@ -8,8 +8,8 @@
     "lint": "eslint 'src/**/*.{ts,vue}'"
   },
   "dependencies": {
-    "vue": "^3.0.4",
-    "vue-monorepo-lib": "*"
+    "@linusborg/lib": "*",
+    "vue": "^3.0.4"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.4",

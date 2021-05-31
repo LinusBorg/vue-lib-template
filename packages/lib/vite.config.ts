@@ -16,8 +16,8 @@ export default <UserConfig>{
   esbuild: false,
   build: {
     lib: {
-      entry: 'src/index.ts',
-      name: 'VueLibMonorepo',
+      entry: 'src/main.ts',
+      name: 'Lib',
     },
     minify: false,
     rollupOptions: {

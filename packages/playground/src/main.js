@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
-import VueMonoRepoLib from 'vue-monorepo-lib'
+import Lib from '@linusborg/lib'
 import App from './App.vue'
 import './index.css'
 
 const app = createApp(App)
 
-app.use(VueMonoRepoLib)
+app.use(Lib)
 app.mount('#app')
