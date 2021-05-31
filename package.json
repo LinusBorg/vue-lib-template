@@ -1,30 +1,28 @@
 {
-  "name": "vue-lib-monorepo",
-  "version": "0.0.0",
-  "description": "A monorepo template for developing vue libraries",
+  "name": "vue-lib-monorepo-template",
+  "version": "0.1.0",
+  "description": "A monorepo template for developing Vue libraries",
   "author": "Thorsten Lünborg <thorsten@linusb.org>",
   "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "main": "index.js",
   "scripts": {
     "start": "lerna run start --stream --parallel --scope '@linusborg/*'",
-    "test": "lerna run test --stream --scope '@linusborg/*'  --",
-    "lint": "lerna run lint -- --fix",
-    "build": "lerna run build --scope '@linusborg/*'",
     "play": "cd packages/playground && yarn start",
+    "test:all": "jest --runInBand --config jest.config.ts",
+    "test:w": "jest --runInBand --config jest.config.ts --watch",
+    "test:packages": "lerna run test --stream --scope '@linusborg/*'  --",
+    "lint": "lerna run lint -- --fix",
+    "build": "yarn build:packages && yarn build playground && yarn build:docs",
+    "build:packages": "lerna run build --scope '@linusborg/*'",
+    "build:playground": "lerna run build --scope 'playground'",
+    "build:docs": "lerna run build --scope 'docs'",
     "cypress": "cypress run --config-file cypress/cypress.json",
-    "cypress:open": "cypress open --config-file cypress/cypress.json",
-    "changeset": "changeset",
-    "release": "changeset publish",
-    "version:canary": "changeset version --snapshot canary",
-    "release:canary": "changeset publish --tag canary"
+    "cypress:open": "cypress open --config-file cypress/cypress.json"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.2.7",
-    "@changesets/cli": "^2.10.3",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
@@ -32,8 +30,8 @@
     "@vue/compiler-sfc": "^3.0.4",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^2.0.0-beta.13",
-    "@vuedx/typecheck": "^0.4.1",
-    "cypress": "^5.2.0",
+    "cypress": "^7.4.0",
+    "esbuild-jest": "^0.5.0",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -45,11 +43,13 @@
     "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-vue": "^6.0.0-0",
     "ts-jest": "^26.4.4",
-    "ts-node": "^9.1.1",
     "typescript": "^4.1.0",
     "vite": "^2.0.0",
     "vue": "^3.0.4",
     "vue-jest": "^5.0.0-alpha.7",
     "vue-tsc": "^0.1.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.0.0"
   }
 }
