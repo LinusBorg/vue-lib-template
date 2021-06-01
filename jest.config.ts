@@ -5,7 +5,6 @@ const esModules = ['lodash-es'].join('|')
 const config: Config.InitialOptions = {
   rootDir: process.cwd(),
   preset: 'ts-jest',
-  globals: {},
   testEnvironment: 'jsdom',
   transform: {
     '^.+\\.vue$': 'vue-jest',
