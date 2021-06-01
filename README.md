@@ -1,8 +1,8 @@
 # Vue Library-Monorepo Template
 
-> A repository template for developing Vue 3 libraries in a monorepo powered by yarn workspaces
+> My personal repo template for developing Vue 3 libraries in a monorepo powered by yarn workspaces
 
-**STATE**: under heavy development ⚠️ This will likely not yet work as intended in some places/scenarios.
+**STATE**: WIP - under development ⚠️ This may not yet work as intended in some places/scenarios.
 
 ## What is this and who is it for?
 
@@ -27,9 +27,7 @@ It also uses a bunch of new/experimental things out of the Vue ecosystem (namely
   * 🖥 E2E Tests with [Cypress](https://www.cypress.io)
 * 🖍 Linting with `eslint` and `prettier`
   * [PLANNED] linting & fixing for staged files (`lint-staged`)
-* [WIP] Changelog & release management via [Changesets](#)
-* [PLANNED] Netlify deployment pre-configured
-* [PLANNED] boilerplate generator for new packages via [hygen](https://www.hygen.io)
+
 
 ## Inspiration and prior art
 
@@ -37,18 +35,16 @@ This template is in huge parts inspired or directly copied from Jared Palmer's [
 
 ## Documentation, FAQ and Troubleshooting
 
-see Github wiki: ...#
+see Github wiki: ...(TBD)
 
 ## Commands
 
 All commands can be run directly from the project root like:
 
+
 ```bash
 yarn start
 ```
-
-Some of them use [wsrun](https://github.com/hfour/wsrun) to run multiple tasks in parallel across packages and stream their output to the terminal.
-
 ### build
 
 Build everything: library packages, docs and playground app
@@ -58,7 +54,7 @@ starts the `Vite` dev server for the playground app for testing playing around w
 
 During `play`, no bundling has to be done as all of the library package's code is compiled JIT by Vite.
 
-Also is the app that cypress should test against.
+Also is the app that cypress can test against.
 
 ### lint
 
@@ -70,23 +66,3 @@ Run `jest` unit tests on all packages
 ### cypress
 
 ### cypress:open
-
-### changeset
-
-### release
-
-### version:canary
-
-### release:canary
-
-## Workflow
-
-### Initial setup
-
-### TDD
-
-### Developing with the playground
-
-### Pull requests
-
-### Release Management
