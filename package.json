@@ -23,6 +23,7 @@
     "cypress:open": "cypress open --config-file cypress/cypress.json"
   },
   "devDependencies": {
+    "@linusborg/eslint-config": "^0.1.0",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
