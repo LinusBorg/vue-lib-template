@@ -1451,17 +1451,18 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
-"@linusborg/eslint-config@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@linusborg/eslint-config/-/eslint-config-0.1.0.tgz#71777f89b04bcb0a77f4b49c4302007c5c4d12af"
-  integrity sha512-YT72nxQYUzqCwq8trWhH2o1k9kfuFn3Iv72XOO/JNrGFjrdsXiISDCC9gq3FlHPu9/5bpoXOjUYqg1uQPu53LQ==
+"@linusborg/eslint-config@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@linusborg/eslint-config/-/eslint-config-0.1.1.tgz#12263290981a0e15cb6fe985a0143d9cc245f97a"
+  integrity sha512-reJfKTwc3BJ1y6XnumQ5hdT9ljqsC/zjDb922frDns4zhTMfHPJdR3ayp8/p3244ITQmAU7VJcCkM3en+IWGrA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.12.0"
     "@typescript-eslint/parser" "^4.12.0"
     eslint-config-prettier "^7.1.0"
+    eslint-plugin-no-autofix "^1.1.2"
     eslint-plugin-prettier "^3.3.1"
     eslint-plugin-unused-imports "^1.1.1"
-    eslint-plugin-vue "^7.3.0"
+    eslint-plugin-vue "^7.13.0"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -3855,6 +3856,14 @@ eslint-plugin-cypress@^2.11.3:
   dependencies:
     globals "^11.12.0"
 
+eslint-plugin-no-autofix@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-no-autofix/-/eslint-plugin-no-autofix-1.1.2.tgz#5f7e1ce04bb719894679c92092fdf2b9f9a1a071"
+  integrity sha512-8QBNR2gqciZuoa7x0Xr1ZUK8z8kuNYSgpGIrNnoiSlgT3KxaUeDjx5zxaEAm0F0V+6iqDFdqU/X8pCxgADS5Yg==
+  dependencies:
+    eslint-rule-composer "^0.3.0"
+    find-up "^5.0.0"
+
 eslint-plugin-prettier@^3.3.1:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.0.tgz#cdbad3bf1dbd2b177e9825737fe63b476a08f0c7"
@@ -3869,7 +3878,7 @@ eslint-plugin-unused-imports@^1.1.1:
   dependencies:
     eslint-rule-composer "^0.3.0"
 
-eslint-plugin-vue@^7.3.0:
+eslint-plugin-vue@^7.13.0:
   version "7.14.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.14.0.tgz#8c00f211064bd2708fc1aa4abd0592538fbb2cb1"
   integrity sha512-IW5A2Td0wEWjFGaGVEO24JNXa8cVFzAQTXrYv/Vu3zyDVS9sjwOpZY0iqub7FOkT2AK3Imtw4U4wg48pP9oWww==
@@ -4295,6 +4304,14 @@ find-up@^4.0.0, find-up@^4.1.0:
   integrity sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
   dependencies:
     locate-path "^5.0.0"
+    path-exists "^4.0.0"
+
+find-up@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-5.0.0.tgz#4c92819ecb7083561e4f4a240a86be5198f536fc"
+  integrity sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==
+  dependencies:
+    locate-path "^6.0.0"
     path-exists "^4.0.0"
 
 flat-cache@^3.0.4:
@@ -6111,6 +6128,13 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+locate-path@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-6.0.0.tgz#55321eb309febbc59c4801d931a72452a681d286"
+  integrity sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==
+  dependencies:
+    p-locate "^5.0.0"
+
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -7044,6 +7068,13 @@ p-limit@^2.2.0:
   dependencies:
     p-try "^2.0.0"
 
+p-limit@^3.0.2:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-3.1.0.tgz#e1daccbe78d0d1388ca18c64fea38e3e57e3706b"
+  integrity sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==
+  dependencies:
+    yocto-queue "^0.1.0"
+
 p-locate@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
@@ -7057,6 +7088,13 @@ p-locate@^4.1.0:
   integrity sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==
   dependencies:
     p-limit "^2.2.0"
+
+p-locate@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-5.0.0.tgz#83c8315c6785005e3bd021839411c9e110e6d834"
+  integrity sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==
+  dependencies:
+    p-limit "^3.0.2"
 
 p-map-series@^2.1.0:
   version "2.1.0"
@@ -9587,3 +9625,8 @@ yn@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/yn/-/yn-3.1.1.tgz#1e87401a09d767c1d5eab26a6e4c185182d2eb50"
   integrity sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
+
+yocto-queue@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
+  integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
