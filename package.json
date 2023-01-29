@@ -9,19 +9,19 @@
     "packages/*"
   ],
   "scripts": {
-    "play": "pnpm -F playground dev",
-    "test": "pnpm run -r test",
-    "test-w": "pnpm run -r test-w",
+    "dev": "pnpm -F playground dev",
+    "test": "pnpm run -r test --if-present",
+    "test-ci": "pnpm run -r test-ci --if-present",
     "test-libs": "pnpm -F '@linusborg/*' run test",
+    "docs": "pnpm -F docs run dev",
+    "docs-build": "pnpm -F docs run build",
     "lint": "pnpm eslint '**/*.{vue,ts,js}' --fix",
     "build": "pnpm build-packages && pnpm build-playground && pnpm build-docs",
-    "build-packages": "pnpm -r -F '@linusborg/*' run build ",
-    "build-playground": "lerna run build --scope 'playground'",
+    "build-packages": "pnpm -r -F '@linusborg/*' run build",
+    "build-playground": "pnpm --F 'playground' run build",
     "build-docs": "pnpm -F 'docs' run build"
   },
-  "lint-staged": {
-    "*.{ts,js,vue}": "eslint --fix --max-warnings=0"
-  },
+  "packageManager": "pnpm@7.25.0",
   "devDependencies": {
     "@linusborg/eslint-config": "^0.3.0",
     "@types/node": "16.18.11",

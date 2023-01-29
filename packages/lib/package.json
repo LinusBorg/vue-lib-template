@@ -1,9 +1,9 @@
 {
   "name": "@linusborg/lib",
-  "description": "CHANGE_METhis is a placeholder description, please change me as well as the name above me.",
-  "version": "0.0.0",
+  "description": "CHANGE_ME This is a placeholder description, please change me as well as the name above me.",
+  "version": "0.0.1",
   "private": false,
-  "author": "Thorsten Lünborg <t.luneborg@googlemail.com>",
+  "author": "CHANGE_ME Thorsten Lünborg <t.luneborg@googlemail.com>",
   "homepage": "",
   "license": "MIT",
   "type": "module",
@@ -20,6 +20,7 @@
   "typings": "types/index.d.ts",
   "files": [
     "dist",
+    "src",
     "types",
     "README.md"
   ],
@@ -34,7 +35,6 @@
     "test-ci": "vitest --run"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
     "@linusborg/lib": "workspace:*"
   },
   "peerDependencies": {

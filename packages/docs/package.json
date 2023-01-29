@@ -15,9 +15,9 @@
     "lib"
   ],
   "scripts": {
-    "start": "vitepress dev .",
+    "dev": "vitepress dev .",
     "build": "vitepress build .",
-    "lint": "eslint 'src/**/*.{ts,vue}' --no-error-on-unmatched-pattern"
+    "lint": "eslint '.vitepress/**/*.{ts,vue}'"
   },
   "dependencies": {
     "@linusborg/lib": "workspace:*"

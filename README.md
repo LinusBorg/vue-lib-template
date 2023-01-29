@@ -43,7 +43,7 @@ We use pnpm to run commands in individual workspaces as needed.
 ### build
 
 Build everything: library packages, docs and playground app
-### play
+### `pnpm dev`
 
 starts the `Vite` dev server for the playground app for testing playing around with your libraries manually. 
 
@@ -51,10 +51,10 @@ During `play`, no bundling has to be done as all of the library package's code i
 
 This app can also be used for end-to-end tests (tooling for that currently not included in this template)
 
-### lint
+### `pnpm lint`
 
 Run eslint on all packages
 
-### test
+### `pnpm test`
 
-Run `vitest` unit tests on all packages
+Run `vitest` unit tests on all packages. Tests will start in watch mode by default. To ru tests once, you can run `test-ci` instead.
