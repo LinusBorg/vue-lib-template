@@ -6,5 +6,6 @@ dist
 packages/*/dist
 packages/*/types
 
+*.tsbuildinfo
 
 TODO.md

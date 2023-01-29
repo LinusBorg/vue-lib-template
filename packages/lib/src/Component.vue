@@ -6,9 +6,7 @@ export default defineComponent({
 		message: { type: String, required: true },
 	},
 	emits: ['messageChanged'],
-	setup() {
-		process
-	},
+	setup() {},
 })
 </script>
 <template>

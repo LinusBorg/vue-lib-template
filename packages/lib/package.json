@@ -1,18 +1,19 @@
 {
   "name": "@linusborg/lib",
+  "description": "CHANGE_METhis is a placeholder description, please change me as well as the name above me.",
   "version": "0.0.0",
   "private": true,
-  "description": "This is a placeholder description, please change me.",
   "author": "Thorsten Lünborg <t.luneborg@googlemail.com>",
   "homepage": "",
   "license": "MIT",
   "type": "module",
   "main": "dist/es5/lib.umd.js",
-  "module": "dist/lib.es.js",
+  "module": "dist/lib.mjs",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
+      "types": "./types/index.d.ts",
+      "import": "./dist/my-lib.mjs",
+      "require": "./dist/my-lib.cjs"
     },
     "./*": "./*"
   },
@@ -22,19 +23,23 @@
     "README.md"
   ],
   "scripts": {
-    "build": "yarn build:lib && yarn build:types",
-    "build:lib": "vite build",
-    "build:types": "vue-tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
-    "tsc": "vue-tsc src --noEmit",
-    "tsc:w": "vue-tsc  src --noEmit --watch",
+    "build": "yarn build-lib && yarn build-types",
+    "build-lib": "vite build",
+    "build-types": "vue-tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
+    "tsc": "vue-tsc --noEmit -p tsconfig.app.json",
+    "tsc-w": "vue-tsc  --noEmit -p tsconfig.app.json --watch",
     "lint": "eslint 'src/**/*.{ts,vue}'",
-    "test:ci": "vitest --run",
-    "test:w": "vitest"
+    "test": "vitest",
+    "test-ci": "vitest --run"
   },
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
     "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4",
+    "vitest": "^0.28.3"
   }
 }

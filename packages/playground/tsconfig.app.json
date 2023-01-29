@@ -6,6 +6,7 @@
     "lib": ["ES2019"],
     "composite": true,
     "outDir": "dist",
+    "declaration": true,
     "declarationDir": "types",
     "allowJs": true,
     "baseUrl": ".",

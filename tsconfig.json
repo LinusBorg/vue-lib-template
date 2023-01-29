@@ -5,9 +5,9 @@
       "path": "./tsconfig.config.json"
     },
     // Docs
-    {
-      "path": "./packages/docs/tsconfig.app.json"
-    },
+    // {
+    //   "path": "./packages/docs/tsconfig.app.json"
+    // },
     // Lib
     {
       "path": "./packages/lib/tsconfig.app.json"
