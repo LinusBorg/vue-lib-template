@@ -10,8 +10,8 @@
   ],
   "scripts": {
     "dev": "pnpm -F playground dev",
-    "test": "pnpm run -r test --if-present",
-    "test-ci": "pnpm run -r test-ci --if-present",
+    "test": "pnpm --if-present -r run test",
+    "test-ci": "pnpm --if-present -r run test-ci",
     "test-libs": "pnpm -F '@linusborg/*' run test",
     "docs": "pnpm -F docs run dev",
     "docs-build": "pnpm -F docs run build",
