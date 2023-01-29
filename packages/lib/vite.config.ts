@@ -1,39 +1,43 @@
-import { UserConfig } from 'vite'
+/// <reference types="vitest"
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import ts from 'rollup-plugin-typescript2'
+import { fileURLToPath } from 'url'
 
-export default <UserConfig>{
-  plugins: [
-    vue(),
-    {
-      apply: 'build',
-      ...ts({
-        tsconfig: './tsconfig.build.json',
-        useTsconfigDeclarationDir: true,
-      }),
-    },
-  ],
-  esbuild: false,
-  build: {
-    lib: {
-      entry: 'src/main.ts',
-      name: 'Lib',
-    },
-    minify: false,
-    rollupOptions: {
-      external: ['vue'],
-      output: {
-        banner: `
-        /**
-         *  Copyright ${new Date(Date.now()).getFullYear()} Thorsten Luenborg 
-         *  @license MIT
-        **/
-        `,
-        exports: 'named',
-        globals: {
-          vue: 'Vue',
-        },
-      },
-    },
-  },
-}
+export default defineConfig({
+	plugins: [vue()],
+	build: {
+		lib: {
+			name: 'Lib', // CHANGEME
+			entry: fileURLToPath(new URL('./src/index.ts', import.meta.url)),
+			formats: ['es', 'cjs', 'iife'],
+			fileName: (format) => {
+				switch (format) {
+					case 'es':
+						return 'index.mjs'
+					case 'cjs':
+						return 'index.cjs'
+					case 'iife':
+						return 'index.js'
+					default:
+						return 'index.js'
+				}
+			},
+		},
+		minify: false,
+		rollupOptions: {
+			external: ['vue'],
+			output: {
+				banner: `
+/**
+ *  Copyright ${new Date(Date.now()).getFullYear()} Thorsten Luenborg 
+ *  @license MIT
+**/
+`,
+				exports: 'named',
+				globals: {
+					vue: 'Vue',
+				},
+			},
+		},
+	},
+})

@@ -1,39 +1,23 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./",
-    "module": "esnext",
-    "lib": ["dom", "esnext"],
-    "importHelpers": true,
-    
-    // trying to get auto `import type` insertion for type imports
-    // doesn't work so far: https://github.com/microsoft/TypeScript/pull/36412#issuecomment-707221008
-    "isolatedModules": true,
-    "importsNotUsedAsValues": "error",
-    //
-
-    "declaration": true,
-    "sourceMap": true,   
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "types": ["vite/client", "jest", "cypress"],
-    "paths": {
-      "@linusborg/lib": ["packages/lib/src/main.ts"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    },
+    // Docs
+    {
+      "path": "./packages/docs/tsconfig.app.json"
+    },
+    // Lib
+    {
+      "path": "./packages/lib/tsconfig.app.json"
+    },
+    {
+      "path": "./packages/lib/tsconfig.vitest.json"
+    },
+    // Playground
+    {
+      "path": "./packages/playground/tsconfig.app.json"
     }
-  },
-  "include": [
-    "/config/*.ts",
-    "/**/src/**/*.ts",
-    "/**/src/**/*.js",
-    "/**/src/**/*.vue",
-    "/cypress/**/*.js",
-    // necessary for un-breaking jest types broken by cypress' chai dependency
-    // https://github.com/cypress-io/cypress/issues/1087#issuecomment-353370449
-    "./node_modules/jest", 
   ]
 }

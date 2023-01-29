@@ -3,13 +3,8 @@
 node_modules
 dist
 
+packages/*/dist
 packages/*/types
 
-package-lock.json
-yarn.lock
-!/yarn.lock
-
-.yalc
-yalc.lock
 
 TODO.md

@@ -14,7 +14,7 @@
       "import": "./dist/my-lib.es.js",
       "require": "./dist/my-lib.umd.js"
     },
-    "./": "./"
+    "./*": "./*"
   },
   "typings": "dist/index.d.ts",
   "files": [
@@ -24,12 +24,12 @@
   "scripts": {
     "build": "yarn build:lib && yarn build:types",
     "build:lib": "vite build",
-    "build:types": "rollup --config ../../config/rollup.types.config.js",
+    "build:types": "vue-tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
     "tsc": "vue-tsc src --noEmit",
     "tsc:w": "vue-tsc  src --noEmit --watch",
     "lint": "eslint 'src/**/*.{ts,vue}'",
-    "test": "jest --config ../../jest.config.ts --runInBand",
-    "test:w": "jest --config ../../jest.config.ts --watch --runInBand"
+    "test:ci": "vitest --run",
+    "test:w": "vitest"
   },
   "dependencies": {
     "tslib": "^2.0.0"
