@@ -18,20 +18,13 @@ It also uses a bunch of new/experimental things out of the Vue ecosystem (namely
 
 * ✅ Full Typescript support for the whole dev workflow
 * ⚡️  Lightning-fast dev workflow completely powered by Vite:
-  * ⚙️ Build your libraries with [Vite](https://github.com/vitejs/vite)
-    * extract type declarations with `rollup-plugin-typescript2`, bundled with `rollup-plugin-dts`
+  * 🎯 Build your libraries with [Vite](https://github.com/vitejs/vite)
+  * ⛱️ Typechecking & Generating declaration files with `vue-tsc`(https://github.com/johnsoncodehk/volar/tree/master/vue-language-tools/vue-tsc)
   * 🏈 Integrated playground app powered by [Vite](https://github.com/vitejs/vite) as well
   * 📚 Documentation powered by [Vitepress](https://vitepress.vuejs.org)
-* Testing:
-  * 💊 Unit Tests with [Jest](https://www.jestjs.io)
-  * 🖥 E2E Tests with [Cypress](https://www.cypress.io)
+* 💊 Unit Tests with [Vitest](https://www.vitest.dev)
 * 🖍 Linting with `eslint` and `prettier`
   * [PLANNED] linting & fixing for staged files (`lint-staged`)
-
-
-## Inspiration and prior art
-
-This template is in huge parts inspired or directly copied from Jared Palmer's [tsdx-monorepo](https://github.com/jaredpalmer/tsdx-monorepo).
 
 ## Documentation, FAQ and Troubleshooting
 
@@ -41,10 +34,12 @@ see Github wiki: ...(TBD)
 
 All commands can be run directly from the project root like:
 
-
 ```bash
 yarn start
 ```
+
+We use pnpm to run commands in individual workspaces as needed.
+
 ### build
 
 Build everything: library packages, docs and playground app
@@ -52,9 +47,9 @@ Build everything: library packages, docs and playground app
 
 starts the `Vite` dev server for the playground app for testing playing around with your libraries manually. 
 
-During `play`, no bundling has to be done as all of the library package's code is compiled JIT by Vite.
+During `play`, no bundling has to be done as all of the library package's code is compiled JIT in the playground app.
 
-Also is the app that cypress can test against.
+This app can also be used for end-to-end tests (tooling for that currently not included in this template)
 
 ### lint
 
@@ -62,7 +57,4 @@ Run eslint on all packages
 
 ### test
 
-Run `jest` unit tests on all packages
-### cypress
-
-### cypress:open
+Run `vitest` unit tests on all packages
