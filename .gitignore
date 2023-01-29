@@ -3,6 +3,7 @@
 node_modules
 dist
 
+packages/docs/.vitepress/cache
 packages/*/dist
 packages/*/types
 

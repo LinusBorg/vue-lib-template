@@ -1,9 +1,9 @@
 // import plugin from 'portal-vue'
-import DefaultTheme from 'vitepress/dist/client/theme-default'
-import VueMonoRepo from 'vue-monorepo-lib'
+import DefaultTheme from 'vitepress/theme'
+import { install } from '@linusborg/lib'
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    app.use(VueMonoRepo)
+    app.use(install)
   },
 }

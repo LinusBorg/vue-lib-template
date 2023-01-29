@@ -20,7 +20,7 @@
     "lint": "eslint 'src/**/*.{ts,vue}' --no-error-on-unmatched-pattern"
   },
   "dependencies": {
-    "@linusborg/lib": "*"
+    "@linusborg/lib": "workspace:*"
   },
   "devDependencies": {
     "vitepress": "1.0.0-alpha.43"
