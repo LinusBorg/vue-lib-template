@@ -3,17 +3,22 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint 'src/**/*.{ts,vue}'"
   },
   "dependencies": {
-    "@linusborg/lib": "*",
+    "@linusborg/lib": "workspace:*",
     "vue": "^3.0.4"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.4",
     "vite": "^4.0.4",
     "vite-plugin-windicss": "^1.2.5"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["@algolia/client-search"]
+    }
   }
 }
