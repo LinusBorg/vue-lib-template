@@ -2,7 +2,7 @@ module.exports = {
 	root: true,
 	// See for info on this preset:
 	// https://github.com/linusborg/eslint-config
-	extends: ['@linusborg', 'plugin:vue/vue3-essential'],
+	extends: ['@linusborg/eslint-config', 'plugin:vue/vue3-essential'],
 	parserOptions: {
 		ecmaVersion: 'latest',
 	},

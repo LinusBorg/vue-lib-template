@@ -23,6 +23,6 @@
     "@linusborg/lib": "workspace:*"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.43"
+    "vitepress": "1.0.0-rc.25"
   }
 }
