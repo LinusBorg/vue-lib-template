@@ -22,7 +22,7 @@
 		"build-playground": "pnpm --F 'playground' run build",
 		"build-docs": "pnpm -F 'docs' run build"
 	},
-	"packageManager": "pnpm@7.25.0",
+	"packageManager": "pnpm@8.10.2",
 	"devDependencies": {
 		"@linusborg/eslint-config": "^0.4.0",
 		"@tsconfig/node20": "^20.1.2",
