@@ -1,9 +1,8 @@
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
-import WindiCSS from 'vite-plugin-windicss'
 process.env.NODE_ENV
 export default defineConfig({
-	plugins: [vue(), WindiCSS()],
+	plugins: [vue()],
 	resolve: {
 		alias: {
 			// we alias to the lib's source files in dev
@@ -19,7 +18,7 @@ export default defineConfig({
 		// we don't minify so we can look at the bundle ouput. Change if you wanna deploy the playground
 		minify: false,
 		rollupOptions: {
-			// Comment in to move vue out of the bundle - easier to look at it that way.
+			// Comment in to move vue out of the bundle - easier to look at the app's bundle content that way.
 			// external: ['vue'],
 		},
 	},
