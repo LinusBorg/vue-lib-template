@@ -1,47 +1,47 @@
 {
-  "name": "@linusborg/lib",
-  "description": "CHANGE_ME This is a placeholder description, please change me as well as the name above me.",
-  "version": "0.0.1",
-  "private": false,
-  "author": "CHANGE_ME Thorsten Lünborg <t.luneborg@googlemail.com>",
-  "homepage": "",
-  "license": "MIT",
-  "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "exports": {
-    ".": {
-      "types": "./types/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    },
-    "./*": "./*"
-  },
-  "typings": "types/index.d.ts",
-  "files": [
-    "dist",
-    "src",
-    "types",
-    "README.md"
-  ],
-  "scripts": {
-    "dev-server": "pnpm --parallel vite",
-    "dev-types": "vue-tsc  --noEmit -p tsconfig.app.json --watch",
-    "build": "yarn build-lib && yarn build-types",
-    "build-lib": "vite build",
-    "build-types": "vue-tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
-    "lint": "eslint 'src/**/*.{ts,vue}'",
-    "test": "vitest",
-    "test-ci": "vitest --run"
-  },
-  "dependencies": {
-    "@linusborg/lib": "workspace:*"
-  },
-  "peerDependencies": {
-    "vue": "^3.0.4"
-  },
-  "devDependencies": {
-    "vite": "^4.5.0",
-    "vitest": "^0.34.6"
-  }
+	"name": "@linusborg/lib",
+	"description": "CHANGE_ME This is a placeholder description, please change me as well as the name above me.",
+	"version": "0.0.1",
+	"private": false,
+	"author": "CHANGE_ME Thorsten Lünborg <t.luneborg@googlemail.com>",
+	"homepage": "",
+	"license": "MIT",
+	"type": "module",
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"exports": {
+		".": {
+			"types": "./types/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		},
+		"./*": "./*"
+	},
+	"typings": "types/index.d.ts",
+	"files": [
+		"dist",
+		"src",
+		"types",
+		"README.md"
+	],
+	"scripts": {
+		"dev-server": "pnpm --parallel vite",
+		"dev-types": "vue-tsc  --noEmit -p tsconfig.app.json --watch",
+		"build": "pnpm build-lib && pnpm build-types",
+		"build-lib": "vite build",
+		"build-types": "vue-tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
+		"lint": "eslint 'src/**/*.{ts,vue}'",
+		"test": "vitest",
+		"test-ci": "vitest --run"
+	},
+	"dependencies": {
+		"@linusborg/lib": "workspace:*"
+	},
+	"peerDependencies": {
+		"vue": "^3.0.4"
+	},
+	"devDependencies": {
+		"vite": "^4.5.0",
+		"vitest": "^0.34.6"
+	}
 }
