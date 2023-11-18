@@ -1,6 +1,6 @@
 # Vue Library-Monorepo Template
 
-> My personal repo template for developing Vue 3 libraries in a monorepo powered by yarn workspaces
+> My personal repo template for developing Vue 3 libraries in a monorepo powered by pnpm workspaces
 
 **STATE**: Still working on this here and ther, but it's working fine, usually ☺️
 
@@ -34,7 +34,7 @@ see Github wiki: ...(TBD)
 All commands can be run directly from the project root like:
 
 ```bash
-yarn start
+pnpm start
 ```
 
 We use pnpm to run commands in individual workspaces as needed.
